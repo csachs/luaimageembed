@@ -1,9 +1,20 @@
 # luaimageembed
 
-LuaTeX using LaTeX package to embed images directly as Base64 encoded versions of theirselves into the document.
+LuaTeX package to embed images directly as base64-encoded versions of themselves into the document. This can be useful, e.g. to package a document with images into a single TeX file, or with automatically generated graphics.
+
 The image files will be decoded, written to a temporary directory, and cleaned up afterwards.
 
-Warning: Alpha quality! No warranty! 
+Use at your own risk.
+
+## Commands
+
+Three commands are wrapped to allow for use with base64-encoded images:
+
+- `\includegraphicsembedded` (`\includegraphics`)
+- `\pgfdeclareimageembedded` (`\pgfdeclareimage`)
+- `\pgfimageembedded` (`\pgfimage`)
+
+Each takes the base64-encoded image data instead of the filename; see the example below. Supported are `png`, `jpg`, `jb2` and `pdf` images.
 
 ## Example
 
@@ -20,6 +31,10 @@ IOsD/UqPmwUAAAAASUVORK5CYII=
 }
 \end{document}
 ```
+
+## Version
+
+0.1 (alpha)
 
 ## License
 
