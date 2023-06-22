@@ -28,7 +28,7 @@ function add_image(data)
         ltn12.source.string(data),
         ltn12.sink.chain(
             mime.decode("base64"),
-            ltn12.sink.file(io.open(file_name, "a"))
+            ltn12.sink.file(io.open(file_name, "ab"))
         )
     )
 
